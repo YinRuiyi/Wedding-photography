@@ -30,7 +30,6 @@ Route::group([],function(){
 	Route::resource('/admin/partners','PartnersController');
 	Route::resource('/admin/user','UserController');
 	Route::resource('/admin/article','ArticleController');
-
 });
 //前台路由组
 Route::group([],function(){

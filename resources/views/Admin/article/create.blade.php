@@ -1,4 +1,4 @@
-@extends('admin.index')
+@extends('Admin.index')
 
 @section('title')
 文章添加

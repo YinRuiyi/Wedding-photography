@@ -31,4 +31,13 @@ class IndexController extends Controller
     		'partners'=>$partners,
     	]);
     }
+    
+    public function fuwu()
+    {
+        $article1=DB::table('article1')->where('status',1)->get();
+
+        return view('fuwu.fuwu',[
+            'article1'=>$article1,
+        ]);
+    }
 }

@@ -8,6 +8,30 @@
 
 			<b class="arrow"></b>
 		</li>
+
+		<li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-bookmark"></i>
+                <span class="menu-text"> 用户管理 </span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li class="">
+                    <a href="/admin/user/create">添加</a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="/admin/user">列表</a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>		
 		<li class="">
 			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-desktop"></i>
@@ -191,6 +215,29 @@
 				</li>
 			</ul>
 		</li>
+		<li class="">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-bookmark"></i>
+                <span class="menu-text"> 服务报价 </span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li class="">
+                    <a href="/admin/article/create">添加</a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="/admin/article">列表</a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
 		
 	</ul><!-- /.nav-list -->
 

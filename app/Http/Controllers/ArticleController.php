@@ -25,7 +25,7 @@ class ArticleController extends Controller
     public function create()
     {
         //
-        return view('admin.article.create');
+        return view('Admin.article.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class ArticleController extends Controller
         }
         //将数据插入到数据库中
         if(DB::table('article1')->insert($data)){
-            return redirect('/admin/article');
+            return redirect('/Admin/article');
         }else{
             return back();
         }

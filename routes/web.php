@@ -28,11 +28,14 @@ Route::group([],function(){
 	Route::resource('/admin/team','TeamController');
 	Route::resource('/admin/news','NewsController');
 	Route::resource('/admin/partners','PartnersController');
+	Route::resource('/admin/user','UserController');
+	Route::resource('/admin/article','ArticleController');
 
 });
 //前台路由组
 Route::group([],function(){
 	Route::get('/','IndexController@index');
+	Route::get('/fuwu','IndexController@fuwu');
 	
 
 });

@@ -16,12 +16,12 @@ class TeamTableSeeder extends Seeder
         for ($i=0; $i < 50; $i++) { 
         	$d = [];
         	$d['membername'] = str_random(10);
-        	$d['concept'] = str_random(10);
+        	$d['concept'] = str_random(255);
         	$d['profile'] = str_random(20);
         	$d['photo'] = $faker->imageUrl(250,250);
-        	$d['position'] = '北京';
+        	$d['position'] = '上海';
         	$d['region'] = '首席摄影师';
-        	$d['status'] = 1;
+        	$d['status'] = 0;
         	$data[] =$d; 
         }
         DB::table('team')->insert($data);

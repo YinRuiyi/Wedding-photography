@@ -251,13 +251,14 @@ header .logo{
 	width: 1230px;
 	height: 190px;
 	margin: auto;
-	line-height: 190px;
+	overflow: hidden;
 }
 .hb img{
 	width: 180px;
 	height: 110px;
 	margin-left: 20px;
 	border: 1px solid #000;
+	margin-top: 40px;
 }
 
 /*结尾*/

@@ -35,11 +35,11 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="step-content pos-rel" id="step-container">
-						<div class="step-pane active" id="step1">
+						<div class="step-pane active" id="step1" style="overflow: hidden;">
 							@foreach($partners as $k => $v)
 							<h3 class="lighter block blue">{{$v->company}} 的资料</h3>
 							<div style="width: 1251px ; height: 624px; margin-top: 50px;">
-								<img src="{{$v->logo}}" alt="图片丢失">
+								<img src="{{$v->logo}}" width="auto" height='100%' alt="图片丢失">
 							</div>
 							@endforeach
 						</div>

@@ -81,7 +81,7 @@
 					<b class="arrow"></b>
 
 					<ul class="submenu">
-						<!-- <li class="">
+						<li class="">
 							<a href="/admin/series/create">
 								<i class="menu-icon fa fa-leaf green"></i>
 								内容添加
@@ -89,36 +89,9 @@
 
 							<b class="arrow"></b>
 							
-						</li> -->
-						<li class="hsub open">
-							<a href="" class="dropdown-toggle">
-								<i class="menu-icon fa fa-leaf green"></i>
-								内容添加
-								<b class="arrow fa fa-angle-down"></b>
-							</a>
-
-							<b class="arrow"></b>
-
-							<ul class="submenu nav-show" style="display: block;">
-								<li class="">
-									<a href="/admin/series/create">
-										<i class="menu-icon fa fa-plus purple"></i>
-										添加系列
-									</a>
-
-									<b class="arrow"></b>
-								</li>
-
-								<li class="">
-									<a href="javascript:void(0)">
-										<i class="menu-icon fa fa-plus purple"></i>
-										添加图片
-									</a>
-
-									<b class="arrow"></b>
-								</li>
-							</ul>
 						</li>
+
+						
 						<li class="">
 							<a href="/admin/series">
 								<i class="menu-icon fa fa-leaf green"></i>

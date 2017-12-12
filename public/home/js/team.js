@@ -16,6 +16,14 @@ $(function(){
 	function(){
 		$(this).css("color","#000");
 	}),
+	// 案例
+	$(".tu a").hover(function(){
+		$(this).css("text-decoration","none");
+		$(this).css("color","#c29b73");
+	},
+	function(){
+		$(this).css("color","#000");
+	}),
 	// 资讯
 	$(".zx_c a").hover(function(){
 		$(this).css("text-decoration","none");
@@ -54,6 +62,23 @@ $(function(){
 
 // 图片变大
 $(function(){
+	// $(".tu").hover(function(){
+	// 	$(".tu > ul> li > a > img").stop().animate({
+	// 		width:"252px",
+	// 		height:"280px",
+	// 		top:"-10px",
+	// 		left:"-10px",
+	// 	},1000)
+	// },function(){
+	// 	$(".tu > ul> li > a > img").stop().animate({
+	// 		width:"242px",
+	// 		height:"270px",
+	// 		top:"0px",
+	// 		left:"0px"
+	// 	},1000)
+	// })
+
+
 	$(".t2").hover(function(){
 		$(".t2 > img").stop().animate({
 			width:"113px",

@@ -4,6 +4,10 @@
 文章列表
 @endsection
 
+@section('text')
+文章列表
+@endsection
+
 @section('content')
 <div class="main-content">
     <!-- #section:basics/content.breadcrumbs -->
@@ -44,16 +48,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if(count($users) > 0)
-                                @foreach($users as $k=>$v)
+                            @if(count($article) > 0)
+                                @foreach($article as $k=>$v)
                                 <tr class="gradeA odd" role="row">
                                     <td class="sorting_1">{{$v->id}}</td>
-                                    <td>{{$v->username}}</td>
-                                    <td>{{$v->email}}</td>
-                                    <td class="center"><img width="20" src="{{$v->profile}}" alt=""></td>
+                                    <td>{{$v->title}}</td>
+                                    <td>{{$v->author}}</td>
+                                    <td class="center"><img width="20" src="{{$v->pic}}" alt=""></td>
+                                    <td>{{$v->content}}</td>
                                     <td class="center">
-                                        <a class="btn btn-info btn-sm pull-left menu-icon fa fa-pencil-square-o" href="/admin/user/{{$v->id}}/edit"></a>
-                                        <form class="del" action="/admin/user/{{$v->id}}" method="post">
+                                        <a class="btn btn-info btn-sm pull-left menu-icon fa fa-pencil-square-o" href="/admin/article/{{$v->id}}/edit"></a>
+                                        <form class="del" action="/admin/article/{{$v->id}}" method="post">
                                         {{method_field('DELETE')}}
                                         {{csrf_field()}}
                                         <button class="btn btn-danger btn-sm menu-icon fa fa-book pull-left"></button>
@@ -67,7 +72,7 @@
                         </tbody>
                     </table>
                 <div class="text-right">
-                    {{$users->appends(['num=>$num','keywords'=>$keywords])->links()}}
+                    {{$article->appends(['num=>$num','keywords'=>$keywords])->links()}}
                 </div>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -77,14 +82,3 @@
     <!-- /.page-content -->
 </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-

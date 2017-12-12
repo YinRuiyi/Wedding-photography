@@ -217,7 +217,7 @@
 		</li>
 		<li class="">
             <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-bookmark"></i>
+                <i class="menu-icon fa fa-bullhorn"></i>
                 <span class="menu-text"> 服务报价 </span>
 
                 <b class="arrow fa fa-angle-down"></b>

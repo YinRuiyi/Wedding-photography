@@ -110,7 +110,7 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="ace-icon fa fa-home home-icon"></i>
-							@section('title')										
+							@section('text')										
 							<a href="/admin">UI库首页</a>
 							@show
 						</li>

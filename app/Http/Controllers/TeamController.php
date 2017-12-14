@@ -39,6 +39,7 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         $data = $request->except(['_token']);
+        
         if($request->has('photo')){
             $suffix = $request->file('photo')->extension();
             $name = uniqid('img_').'.'.$suffix;

@@ -36,6 +36,10 @@ Route::group([],function(){
 Route::group([],function(){
 	Route::get('/','IndexController@index');
 	Route::get('/fuwu','IndexController@fuwu');
+	Route::get('/teamA','IndexController@teamA');
+	Route::get('/teamB','IndexController@teamB');
+	Route::get('/teamC','IndexController@teamC');
+	Route::get('/team/{id}','IndexController@teamShow');
 	
 
 });

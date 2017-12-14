@@ -22,12 +22,12 @@
             <ul class="submenu">
 
                 <li class="">
-                    <a href="/admin/user/create">添加</a>
+                    <a href="/admin/user/create">用户添加</a>
                     <b class="arrow"></b>
                 </li>
 
                 <li class="">
-                    <a href="/admin/user">列表</a>
+                    <a href="/admin/user">用户列表</a>
                     <b class="arrow"></b>
                 </li>
             </ul>
@@ -226,16 +226,66 @@
             <b class="arrow"></b>
 
             <ul class="submenu">
+            	<li class="">
+		        	<a href="#" class="dropdown-toggle">
+			            <i class="menu-icon fa fa-caret-right"></i>
+			            文章管理 
+			            <b class="arrow fa fa-angle-down"></b>
+		            </a>
 
-                <li class="">
-                    <a href="/admin/article/create">添加</a>
-                    <b class="arrow"></b>
-                </li>
+	            	<b class="arrow"></b>
 
-                <li class="">
-                    <a href="/admin/article">列表</a>
-                    <b class="arrow"></b>
-                </li>
+		            <ul class="submenu">
+		                <li class="">
+		                    <a href="/admin/article/create">
+			                	<i class="menu-icon fa fa-leaf green"></i>
+			                    文章添加
+		                	</a>
+		                </li>
+
+		                <b class="arrow"></b>
+
+		                <li class="">
+		                    <a href="/admin/article">
+			                	<i class="menu-icon fa fa-leaf green"></i>
+			                    文章列表
+		                	</a>
+		                </li>
+
+		                <b class="arrow"></b>
+
+		            </ul>
+	        	</li>
+            	<li class="">
+		        	<a href="#" class="dropdown-toggle">
+			            <i class="menu-icon fa fa-caret-right"></i>
+			            图片管理 
+			            <b class="arrow fa fa-angle-down"></b>
+		            </a>
+
+	            	<b class="arrow"></b>
+
+		            <ul class="submenu">
+		                <li class="">
+		                    <a href="/admin/image/create">
+			                	<i class="menu-icon fa fa-leaf green"></i>
+			                    图片添加
+		                	</a>
+		                </li>
+
+		                <b class="arrow"></b>
+
+		                <li class="">
+		                    <a href="/admin/image">
+			                	<i class="menu-icon fa fa-leaf green"></i>
+			                    图片列表
+		                	</a>
+		                </li>
+
+		                <b class="arrow"></b>
+
+		            </ul>
+	        	</li>
             </ul>
         </li>
 		

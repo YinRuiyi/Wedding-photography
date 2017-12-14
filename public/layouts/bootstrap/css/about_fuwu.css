@@ -1,0 +1,309 @@
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*导航栏*/
+header{
+	width: 1230px;
+	height: 68px;
+	margin: auto;
+	position: relative;
+}
+header .logo{
+	width: 285px;
+	height: 68px;
+}
+header .logo img{
+	margin-top: 22px;
+	margin-left: 20px;
+}
+.nav{
+	width: 930px;
+	height: 68px;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 285px;
+	z-index: 3;
+}
+.nav ul{
+	margin-top: 27px;
+	text-align: center;
+}
+.nav .nav_a{
+	color: #000;
+	font-size: 15px;
+}
+.nav ul li{
+	width: 100px;
+	height: 40px;
+	float: left;
+	font-size: 13px;
+	position: relative;
+	line-height: 30px;
+}	
+.nav ul li .list{
+	width:100px;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	display: none;
+	background-color: #fff;
+}
+.nav ul li .list a{
+	color: #000;
+}
+.cen{
+	margin-left: 840px;
+	line-height: 22px;
+}
+.cen a{
+	color: #999;
+	padding: 6px;
+	font-size: 11px;
+	border-radius: 22px;
+	border: 1px solid #999;
+}
+
+/*经典案例*/
+.jd{
+	text-align: center;
+	margin-top: 70px;
+}
+
+/*案例介绍*/
+.fl{
+	width: 1230px;
+	height: 33px;
+	background-color: #c29b73;
+	margin: auto;
+	margin-top: 50px;
+}
+.fl .fl_t{
+	width: 570px;
+	height: 33px;
+	margin: auto;
+}
+.fl .fl_t p{
+	width: 190px;
+	height: 33px;
+	float: left;
+	text-align: center;
+	line-height: 33px;
+	font-size: 17px;
+	color: #000;
+}
+.fl .fl_t p:hover{
+	margin-top: -7px;
+	height: 40px;
+	background-color: #2d2d2d;
+	color: #fff;
+	line-height: 45px;
+}
+.fw{
+	width: 1200px;
+	height: 300px;
+	margin: auto;
+	margin-top: 50px;
+	position: relative;
+}
+.fw .fw_l{
+	width: 400px;
+	height: 300px;
+}
+.fw .fw_l p{
+	color: #000;
+	line-height: 250px;
+	text-align: center;
+	font-size: 40px;
+}
+.fw .fw_r{
+	width: 700px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 450px;
+}
+.fw .fw_r p{
+	color: #000;
+	margin-top: 40px;
+	font-size: 13px;
+}
+.tu{
+	width: 100%;
+	height: 460px;
+	margin: auto;
+	background-color: #2d2d2d;
+	margin-top: 70px;
+}
+.tu .tu_t{
+	width: 1349px;
+	height: 133px;
+	margin: auto;
+}
+.tu .tu_t ul li{
+	width: 449.5px;
+	height: 135px;
+	float: left;
+	border-left: 1px solid #ababab;
+	background-color: #2d2d2d;
+	text-align: center;
+}
+.tu .tu_t ul li .y{
+	color: #fff;
+	font-size: 70px;
+}
+.tu .tu_t ul li .z{
+	margin-top: -30px;
+	color: #ababab;
+	font-size: 15px;
+}
+.tu .tu_b{
+	width: 1349px;
+	height: 325px;
+	margin: auto;
+}
+.tu img{
+	width: 1349px;
+	height: 325px;
+}
+
+/*最新资讯*/
+.zx{
+	width: 1230px;
+	height: 30px;
+	margin: auto;
+}
+.zx_a{
+	width: 100%;
+	height: 180px;
+	background-color: #d4d4d4;
+}
+.zx_a ul{
+	width: 1230px;
+	height: 180px;
+	margin: auto;
+}
+.zx_a ul li{
+	width: 390px;
+	height: 50px;
+	line-height: 70px;
+	border-bottom: 1px solid #999;
+	font-size: 10px;
+	float: left;
+	margin-left: 20px;
+}
+.zx_a ul .zx_b{
+	margin-left: 0px;
+}
+.zx_a ul li a{
+	color: #000;
+}
+
+/*结尾*/
+.end{
+	 width: 100%;
+	 height: 430px; 
+	 background-color: #2d2d2d;
+}
+.jw{
+	height: 340px;
+}
+.jw .jw_l{
+	 height: 340px;
+}
+.jw .jw_l ul{
+	width: 70px;
+	margin-top: 70px;
+	margin-left: 50px;
+	float: left;
+}
+.jw .jw_l ul li{
+	margin-top: 11px;
+}
+.jw .jw_l ul p a{
+	color: #fff;
+	font-size: 13px;
+}
+.jw .jw_l ul li a{
+	color: #fff;
+	font-size: 13px;
+}
+.jw .jw_r{
+	 height: 235px;
+	 margin-top: 70px;
+	 border-left: 1px solid #ababab;
+}
+.jw .jw_r1{
+	width: 300px;
+	height: 185px;
+	text-align: left;
+	margin-top: -11px;
+	margin-left: 70px;
+	position: relative;
+}
+.jw .jw_r1 p a{
+	color: #fff;
+}
+.jw .jw_r1 .z{
+	color: #fff;
+	font-size: 13px;
+}
+.jw .jw_r1 .r1 a{
+	font-size: 30px;
+}
+.jw .jw_r1 .r2 a{
+	font-size: 20px;
+}
+.jw .jw_r1 .r3 a{
+	font-size: 13px;
+	position: absolute;
+	top: 91px;
+	left: 65px;
+}
+.jw .jw_r1 .r4 a{
+	font-size: 13px;
+	position: absolute;
+	top: 119px;
+	left: 43px;
+}
+.jw .jw_r1 .r5 a{
+	font-size: 13px;
+	position: absolute;
+	top: 147px;
+	left: 43px;
+}
+.jw .jw_r2{
+	margin-left: 70px;
+}
+
+.bottom{
+	 background: #fff; 
+	 height: 45px;
+	 position: relative;
+}
+.bottom p{
+	line-height: 45px;
+	font-size: 11px;
+	color: #000;
+}
+.bottom p a{
+	color: #000;
+}
+.bottom .t1 img{
+	position: absolute;
+	top: 7px;
+	right: 100px;
+}
+.bottom .t2 img{
+	position: absolute;
+	top: 7px;
+	right: 65px;
+}

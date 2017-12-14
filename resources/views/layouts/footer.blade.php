@@ -76,10 +76,10 @@
 							<p class="jw_a r5"><a href="#">1776101908@163.com</a></p>
 						</div>
 						<div class="jw_r2">
-							<a href="#"><img src="images/qq.png" alt=""></a>
-							<a href="#"><img src="images/qq.png" alt=""></a>
-							<a href="#"><img src="images/qq.png" alt=""></a>
-							<a href="#"><img src="images/qq_01.png" alt=""></a>
+							<a href="#"><img src="/layouts/images/qq.png" alt=""></a>
+							<a href="#"><img src="/layouts/images/qq.png" alt=""></a>
+							<a href="#"><img src="/layouts/images/qq.png" alt=""></a>
+							<a href="#"><img src="/layouts/images/qq_01.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -87,8 +87,8 @@
 			<div class="bottom col-md-12">
 				<div class="container">
 					<p>COPYRIGHT(C)2015-2024 上海唯星婚纱摄影有限公司&nbsp;&nbsp;&nbsp;<a href="" class="bottom_z">站点地图</a></p>
-					<a href="#" class="t1"><img src="images/yu.png" alt=""></a>
-					<a href="#" class="t2"><img src="images/er.png" alt=""></a>
+					<a href="#" class="t1"><img src="/layouts/images/yu.png" alt=""></a>
+					<a href="#" class="t2"><img src="/layouts/images/er.png" alt=""></a>
 				</div>	
 			</div>
 		</div>

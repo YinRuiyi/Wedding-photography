@@ -1,9 +1,13 @@
 @extends('Admin.index')
 
 @section('title')
-文章列表
+图片列表
 @endsection
 
+@section('text')
+图片列表
+@endsection
+  
 @section('content')
 <div class="main-content">
     <!-- #section:basics/content.breadcrumbs -->
@@ -11,7 +15,7 @@
         <ul class="breadcrumb">
             <li>
                 <i class="ace-icon fa fa-home home-icon"></i>
-                UI库文章列表页
+                UI库图片列表页
             </li>
         </ul><!-- /.breadcrumb -->
 
@@ -37,23 +41,21 @@
                         <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 100px;">ID</th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 224px;">用户名</th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 205px;">邮箱</th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 161px;">头像</th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 200px;">图片名称</th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 400px;">预览</th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 121px;">操作</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if(count($users) > 0)
-                                @foreach($users as $k=>$v)
+                            @if(count($image) > 0)
+                                @foreach($image as $k=>$v)
                                 <tr class="gradeA odd" role="row">
                                     <td class="sorting_1">{{$v->id}}</td>
-                                    <td>{{$v->username}}</td>
-                                    <td>{{$v->email}}</td>
-                                    <td class="center"><img width="20" src="{{$v->profile}}" alt=""></td>
+                                    <td>{{$v->iname}}</td>
+                                    <td class="center"><img width="60" height="80" src="{{$v->img}}" alt=""></td>
                                     <td class="center">
-                                        <a class="btn btn-info btn-sm pull-left menu-icon fa fa-pencil-square-o" href="/admin/user/{{$v->id}}/edit"></a>
-                                        <form class="del" action="/admin/user/{{$v->id}}" method="post">
+                                        <a class="btn btn-info btn-sm pull-left menu-icon fa fa-pencil-square-o" href="/admin/image/{{$v->id}}/edit"></a>
+                                        <form class="del" action="/admin/image/{{$v->id}}" method="post">
                                         {{method_field('DELETE')}}
                                         {{csrf_field()}}
                                         <button class="btn btn-danger btn-sm menu-icon fa fa-book pull-left"></button>
@@ -67,7 +69,7 @@
                         </tbody>
                     </table>
                 <div class="text-right">
-                    {{$users->appends(['num=>$num','keywords'=>$keywords])->links()}}
+                    {{$image->appends(['num=>$num','keywords'=>$keywords])->links()}}
                 </div>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -77,14 +79,3 @@
     <!-- /.page-content -->
 </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-

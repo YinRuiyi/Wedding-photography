@@ -30,8 +30,11 @@ Route::group([],function(){
 	Route::resource('/admin/partners','PartnersController');
 	Route::resource('/admin/user','UserController');
 	Route::resource('/admin/article','ArticleController');
+
 	Route::resource('/admin/class','ClassController');
 	Route::resource('/admin/childclass','ChildClassController');
+
+	Route::resource('/admin/image','ImageController');
 
 });
 //前台路由组

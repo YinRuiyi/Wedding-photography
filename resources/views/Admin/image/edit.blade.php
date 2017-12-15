@@ -15,22 +15,17 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-6">
-                        <form role="form" action="/admin/user/{{$user->id}}" method="post" enctype="multipart/form-data" class="text-left">
+                        <form role="form" action="/admin/image/{{$image->id}}" method="post" enctype="multipart/form-data" class="text-left">
                             <div class="form-group">
-                                <label>用户名</label>
-                                <input class="form-control" name="username" value="
-                                {{$user->username}}">
+                                <label>图片名称</label>
+                                <input class="form-control" name="iname" value="
+                                {{$image->iname}}">
                             </div>
 
                             <div class="form-group">
-                                <label>邮箱</label>
-                                <input class="form-control" name="email" value="{{$user->email}}">
-                            </div>
-
-                            <div class="form-group">
-                                <img src="{{$user->profile}}" width="20"><hr>
-                                <label>头像</label>
-                                <input type="file" class="form-control" name="profile">
+                                <img src="{{$image->img}}"><hr>
+                                <label>预览</label>
+                                <input type="file" class="form-control" name="img">
                             </div>
                             {{csrf_field()}}
                             {{method_field('PUT')}}
@@ -49,10 +44,3 @@
     <!-- /.col-lg-12 -->
 </div>
 @endsection
-
-
-
-
-
-
-

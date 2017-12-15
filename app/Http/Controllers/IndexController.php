@@ -103,10 +103,12 @@ class IndexController extends Controller
 
     public function fuwu()
     {
-        $article1=DB::table('article1')->where('status',1)->get();
+        $article1=DB::table('article1')->get();
+        $image1=DB::table('image1')->get();
 
-        return view('fuwu.fuwu',[
+        return view('index.fw_p',[
             'article1'=>$article1,
+            'image1'=>$image1,
         ]);
     }
 }

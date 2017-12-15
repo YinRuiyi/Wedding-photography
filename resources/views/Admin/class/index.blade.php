@@ -14,7 +14,7 @@
 </style>
 @endsection
 @section('title')
-轮播图片列表
+分类列表
 @endsection
 @section('content')
 <div class="main-content">
@@ -26,7 +26,10 @@
 				<a href="/admin">唯星库首页</a>
 			</li>
 			<li>
-				<a href="/admin/focus">轮播图</a>
+				<a href="/admin/class">分类管理</a>
+			</li>
+			<li>
+				<a href="/admin/class">分类列表</a>
 			</li>
 		</ul><!-- /.breadcrumb -->
 	</div>
@@ -57,56 +60,51 @@
 												{{session('msg')}}
 											</div>
 											@endif
-											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover" style="width:70%;">
 												<thead>
 													<tr>
-														<th class="col-md-1 col-md-offset-4 text-center">
-															ID
-														</th>
-
-														<th class="col-md-1 col-md-offset-4 text-center">
-															名称
-														</th>
-														<th class="col-md-2 text-center">图片</th>
 														
 														<th class="col-md-1 text-center">
 															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-															状态</th>
+															序号
+														</th>
+														<th class="col-md-1 col-md-offset-4 text-center">
+															分类名称
+														</th>
+														<th class="col-md-1 col-md-offset-4 text-center">
+															ID
+														</th>
+														
+														<th class="col-md-1 col-md-offset-4 text-center">
+															站内链接
+														</th>
 														<th class="col-md-3 text-center">操作</th>
 													</tr>
 												</thead>
 
 												<tbody>
 													
-														@foreach($focus as $k => $v)
+														@foreach($class as $k => $v)
 														<tr>
-															<td class="center" style="line-height: 300px;">
+															<td  style="text-align: center;" class="hidden-480">
+																	<span class="label label-success arrowed">{{$v->num}}</span>
+																
+															</td>
+															<td class="center col-md-2">
+																{{$v->classname}}
+															</td>
+															<td class="center">
 																{{$v->id}}
 															</td>
-															<td class="center col-md-2" style="line-height: 300px;">
-																{{$v->fname}}
-															</td>
-															<td>
-																<img style="max-width: 690px; max-height: 300px;" src="{{$v->focus}}" alt="图片丢失" style="width: 100px; height: 100px;">
-															</td>
 															
-															<td  style="line-height: 300px; text-align: center;" class="hidden-480">
-																@if($v->status > 0) 
-																	<span class="label label-success arrowed">已使用</span>
-																@else
-																	<span class="label label-sm label-warning">未使用</span>
-																@endif
+															
+															<td  class="center col-md-2">
+																{{$v->link}}
 															</td>
-															<td  style="line-height: 300px; text-align: center;">
+															<td  style="text-align: center;">
 																<div class="hidden-sm hidden-xs btn-group">
-																	<form class="pull-left" method="get" action="/admin/focus/{{$v->id}}">
-																		{{csrf_field()}}	
-																		<button class="btn btn-xs btn-success" title="">
-																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																		</button>
-																	</form>
-
-																	<form class="pull-left" method="get" action="/admin/focus/{{$v->id}}/edit">
+																	
+																	<form class="pull-left" method="get" action="/admin/class/{{$v->id}}/edit">
 																		
 																		{{csrf_field()}}
 																		<button class="btn btn-xs btn-info">
@@ -114,7 +112,7 @@
 																		</button>
 																	</form>
 
-																	<form action="/admin/focus/{{$v->id}}" method="post" class="pull-left del">
+																	<form action="/admin/class/{{$v->id}}" method="post" class="pull-left del">
 																		{{method_field('DELETE')}}
 																		{{csrf_field()}}
 																		<button class="btn btn-xs btn-danger">
@@ -127,7 +125,7 @@
 														</tr>
 														@endforeach
 												</tbody>
-												{{ $focus->links() }}
+												{{ $class->links() }}
 											</table>
 										</div><!-- /.span -->
 									</div><!-- /.row -->
@@ -145,7 +143,7 @@
 @section('js')
 <script>
 $('.del').submit(function(e){
-    if(!confirm('您确定要删除该用户么?')) return false;
+    if(!confirm('您确定要删除该分类么?')) return false;
 });
 </script>
 @endsection

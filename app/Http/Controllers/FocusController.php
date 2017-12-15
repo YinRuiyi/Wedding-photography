@@ -55,7 +55,7 @@ class FocusController extends Controller
 
             $data['focus'] = trim($dir.'/'.$name,'.');
        		
-       		
+       		 
 
        		if (DB::table('focus')->insert($data)) {
 	            return redirect('admin/focus')->with('msg','添加成功');
@@ -122,7 +122,17 @@ class FocusController extends Controller
             $data['focus'] = trim($dir.'/'.$name,'.');
             
         }
+        $num = (int)$data['status'];
 
+        $status = DB::table('focus')->where('status',[$data['status']])->value('status');
+        
+        if ($num!=0) {
+           
+            if (count($status)) {
+                return redirect('admin/focus')->with('msg','这个坑有人占了哦');
+            }
+        }
+        
 		if (DB::table('focus')->where('id',$id)->update($data)) {
 			return redirect('admin/focus')->with('msg','更新成功..');
         }else{

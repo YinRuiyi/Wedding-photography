@@ -7,8 +7,9 @@
    <script src="/home/js/jquery.js"></script>
    <script src="/home/js/bootstrap.js"></script>
    <script src="/home/js/holder.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="/home/css/zy.css">
    <script src="/home/js/zy.js"></script>
+   <link rel="stylesheet" type="text/css" href="/home/css/zy.css">
+   
    @section('csjs')
    
    @show

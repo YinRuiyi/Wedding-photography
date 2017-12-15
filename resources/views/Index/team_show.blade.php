@@ -39,18 +39,24 @@
 	</div>
 
 	<div class="herf">
-		<div class="pull-left col-md-6 left"><a href="/team/{{$idup}}">上一页:
+		<div class="pull-left col-md-6 left">
 		@if($idup < $idMin)
+		<a href="">上一页:
 		无
 		@else
+		<a href="/team/{{$idup}}">上一页:
 		{{$teamUp}}
 		@endif
 		</a></div>
-		<div class="pull-left col-md-6 right"><a href="/team/{{$iddown}}">下一页:
+		<div class="pull-left col-md-6 right">
+
+			
 		
 		@if($iddown > $idMax)
+		<a href="">下一页:
 		无
 		@else
+		<a href="/team/{{$iddown}}">下一页:
 		{{$teamDown}}	
 		@endif
 		</a></div>
@@ -61,11 +67,13 @@
 	<div class="team-all">
 		@foreach($team as $k=>$v)
 		<div class="team pull-left">
-			<div class="img">
-				<img src="{{$v->photo}}"  alt="">
-			</div>
-			<p style="margin-top: 15px;">{{$v->region}}</p>
-			<p style="margin-top: -11px;">{{$v->membername}}</p>
+			<a href="/team/{{$v->id}}">
+				<div class="img">
+					<img src="{{$v->photo}}"  alt="">
+				</div>
+				<p style="margin-top: 15px;">{{$v->region}}</p>
+				<p style="margin-top: -11px;">{{$v->membername}}</p>
+			</a>
 		</div>
 		@endforeach
 	</div>

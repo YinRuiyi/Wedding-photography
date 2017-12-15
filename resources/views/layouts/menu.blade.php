@@ -10,7 +10,7 @@
 		</li>
 
 		<li class="">
-            <a href="#" class="dropdown-toggle">
+            <a href="" class="dropdown-toggle">
                 <i class="menu-icon fa fa-bookmark"></i>
                 <span class="menu-text"> 用户管理 </span>
 
@@ -30,6 +30,58 @@
                     <a href="/admin/user">列表</a>
                     <b class="arrow"></b>
                 </li>
+            </ul>
+        </li>
+        <li class="">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon fa fa-bookmark"></i>
+                <span class="menu-text"> 分类管理 </span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+                <li class="">
+                    <a href="/admin/class/create">添加分类</a>
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="">
+                    <a href="/admin/class">查看分类</a>
+                    <b class="arrow"></b>
+                </li>
+                <li class="hsub open">
+					<a href="" class="dropdown-toggle">
+						<i class="menu-icon fa fa-caret-right"></i>
+						添加子类
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu nav-show" style="display: block;">
+						<li class="">
+							<a href="/admin/childclass/create">
+								<i class="menu-icon fa fa-leaf green"></i>
+								添加
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+						<li class="">
+							<a href="/admin/childclass">
+								<i class="menu-icon fa fa-leaf green"></i>
+								查看
+							</a>
+
+							<b class="arrow"></b>
+						</li>
+						
+					</ul>
+				</li>
             </ul>
         </li>		
 		<li class="">

@@ -1,9 +1,10 @@
 @extends('Admin.index')
 @section('title')
-	@foreach($focus as $k=>$v)
-		{{$v->fname}}的修改
+	@foreach($child as $k=>$v)
+		{{$v->childname}}的修改
 	@endforeach
 @endsection
+
 @section('content')
 <div class="main-content">
 	<!-- #section:basics/content.breadcrumbs -->
@@ -15,13 +16,13 @@
 			</li>
 
 			<li>
-				<a href="/admin/focus">轮播图</a>
+				<a href="/admin/class">分类管理</a>
 			</li>
 			<li>
-				<a href="/admin/focus/create">
-					@foreach($focus as $k=>$v)
+				<a href="/admin/class/create">
+					@foreach($child as $k=>$v)
 					
-					{{$v->fname}}的修改
+					{{$v->childname}}的修改
 					
 					@endforeach
 				</a>
@@ -42,42 +43,43 @@
 				<div class="col-xs-12">
 					<div class="step-content pos-rel" id="step-container">
 						<div class="step-pane active" id="step1">
-							@foreach($focus as $k => $v)
-							<h3 class="lighter block blue">请修改 {{$v->fname}} 的信息</h3>
-							<table style="position: relative;width: 60%;" class="table table-bordered table-hover table-striped">
-								<form method="post" action="/admin/focus/{{$v->id}}" enctype="multipart/form-data">
+							@foreach($child as $k => $v)
+							<h3 class="lighter block blue">请修改 {{$v->childname}} 的信息</h3>
+							<table id="table" style="position: relative;width: 60%;" class="table ">
+								<form method="post" action="/admin/childclass/{{$v->id}}" enctype="multipart/form-data">
 								<tr>
-									<td>id</td>
-									<td>{{$v->id}}</td>
-								</tr>
-								<tr>
-									<td>名称</td>
-									<td>
-										<input type="text" value="{{$v->fname}}" name="fname" id="fname" style="border: none; width: 100%; height: 100%; background-color: transparent;">
+									<td style="border:none;">id</td>
+									<td style="border:none;">
+										<input type="text" value="{{$v->id}}" name="id" disabled="">
 									</td>
 								</tr>
 								<tr>
-									<td>状态</td>
-									<td>
-										@for($i=0;$i<13;$i++)
-										@if($i != 0)
-										<input type="radio" style="padding-top: 15px;" <?php if ($v->status==$i): ?> checked='true' <?php endif ?> value="{{$i}}" name="status">
-										
-										<span class="label label-success arrowed">{{$i}}</span>
-										@else
-										<input type="radio" style="padding-top: 15px;" <?php if ($v->status==$i): ?> checked='true' <?php endif ?> value="{{$i}}" name="status">
-										<span class="label label-sm label-warning">禁用</span>
-										@endif
-										@endfor
-									</td> 
+									<td style="border:none;">父级</td>
+									<td style="border:none;">
+										<select id="classid" name="classid">
+											@foreach($class as $key=>$value)
+											<option value="{{$value->id}}">{{$value->classname}}</option>
+											@endforeach
+										</select>
+										<span style="color: #999; display: inline-block; text-indent: 16px;">(不可修改)</span>
+									</td>
 								</tr>
 								<tr>
-									<td class="text-center">原版图片</td>
-									<td>
-										<label for="focus">
-											<img src="{{$v->focus}}" alt="图片丢失" style="width: 100%; height: auto">
-										</label>
-										<input type="file" id="focus" name="focus">
+									<td style="border:none;">名称</td>
+									<td style="border:none;">
+										<input type="text" value="{{$v->childname}}" name="childname" id="childname">
+									</td>
+								</tr>
+								<tr>
+									<td style="border:none;">序号</td>
+									<td style="border:none;">
+										<input type="text" value="{{$v->childnum}}" name="childnum" id="childnum">
+									</td>
+								</tr>
+								<tr>
+									<td style="border:none;">站内链接</td>
+									<td style="border:none;">
+										<input type="text" value="{{$v->childlink}}" name="childlink" id="childlink">
 									</td>
 								</tr>
 								<hr>

@@ -3,49 +3,33 @@
 首页
 @stop
 @section('csjs')
+<script src="/home/js/MYJS.js"></script>
 <link rel="stylesheet" type="text/css" href="home/css/zy.css">
-<script src="home/js/zy.js"></script>
-@show
+<link rel="stylesheet" type="text/css" href="home/css/MYJS.css">
+
+@endsection
 @section('content')
 	<!-- 轮播图 start -->
-	<div id="" class="carousel slide" data-ride="carousel" style="z-index: 1; margin-top: 20px;">
-				  
-		  <ol class="carousel-indicators">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		  </ol>
+	<div id="" class="focus" style="z-index: 1;">
+		 
+		<ul>	
+			@foreach($focus as $k=>$v)
+			<li class="@if($k==0) active @endif"></li> 
+			@endforeach
+		</ul>
 
-		  
-		  <div class="carousel-inner" role="listbox">
-		   
-		    <div class="item active">
-		      <img src="holder.js/100px570" alt="...">
-		     
-		    </div>
+	    @foreach($focus as $k=>$v)
+	    <div class="focus_img item @if($k==0) active @endif">
+	    	<a href="#">
+		    	<img src="{{$v->focus}}" alt="...">
+		    	<div>{{$v->id}}</div>
+		    </a>
+	    </div>
 		    
-		    <div class="item">
-		      <img src="holder.js/100px570?theme=sky" alt="...">
-		      
-		    </div>
-		    <div class="item">
-		      <img src="holder.js/100px570?bg=#eaf" alt="...">
-		      
-		    </div>
-
-		  </div>
-		  
-		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
+	    @endforeach
+	   
 	</div>
-	<!-- 轮播图 end -->
-
+	<!-- 轮播图 end --> 
 	<!-- CLASSIC SERIES  start -->
 	<div class="pz" style="margin-top: 35px;">
 		<span>CLASSIC SERIES</span>
@@ -54,7 +38,7 @@
 		Villa decoration attention to indoor and outdoor environment of the overall planning and design, the people's pursuit of villa decoration from the simple design of luxury
 		decoration began to move closer to the human nature and high quality of construction technology.</p>
 	</div>
-	<div class="focus">
+	<div class="series">
 		<div class="box">
 			<ul>
 				@foreach($series as $k=>$v)

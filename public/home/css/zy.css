@@ -73,53 +73,55 @@ header .logo{
 	width: 1230px;
 	height: 170px;
 	margin: auto;
+	position: relative;
+	top: 30px;
 }
-.focus{
+.series{
 	width:1230px;
 	height:430px;
 	margin:50px auto;
 	position: relative;
 	overflow: hidden;
 }
-.focus .box{
+.series .box{
 	width:1230px;
 	height:430px;
 	position: absolute;
 	
 }
-.focus .box .box_1{
+.series .box .box_1{
 	width: 305px;
 	height: 430px;
 	border: 1px solid #fff;
 	position: relative;
 	float: left;
 }
-.focus .box .box_1 img{
+.series .box .box_1 img{
 	width:305px;
 	height:250px;
 	float:left;
 }
-.focus .box .box_1 .box_b{
+.series .box .box_1 .box_b{
 	width: 305px;
 	height: 300px;
 	transition: 0.3s;
 }
-.focus .box .box_1 .box_b h3{
+.series .box .box_1 .box_b h3{
 	text-align: center;
 	color: #ababab;
 	margin-top: 300px;
 	transition: 0.3s;
 }
-.focus .box .box_1 .box_b h4{
+.series .box .box_1 .box_b h4{
 	text-align: center;
 	transition: 0.3s;
 }
-.focus .box .box_1 .box_b h5{
+.series .box .box_1 .box_b h5{
 	text-align: center;
 	color: #ababab;
 	transition: 0.3s;
 }
-.focus .box .box_1 .box_b p{
+.series .box .box_1 .box_b p{
 	margin: auto;
 	width: 240px;
 	text-align: center;
@@ -129,26 +131,26 @@ header .logo{
 	transition: 0.3s;
 	opacity: 0;
 }
-.focus .box .box_1 .box_b img{
+.series .box .box_1 .box_b img{
 	width: 25px;
 	height: 25px;
 	margin-top: 60px;
 	margin-left: 128px;
 }
-.focus .box .box_1 .box_b:hover{
+.series .box .box_1 .box_b:hover{
 	transform: translate(0px,-130px);
 	background-color: #2d2d2d;
 }
-.focus .box .box_1 .box_b:hover h3{
+.series .box .box_1 .box_b:hover h3{
 	transform: translate(0px,10px);
 }
-.focus .box .box_1 .box_b:hover h4{
+.series .box .box_1 .box_b:hover h4{
 	transform: translate(0px,20px);
 }
-.focus .box .box_1 .box_b:hover h5{
+.series .box .box_1 .box_b:hover h5{
 	transform: translate(0px,30px);
 }
-.focus .box .box_1 .box_b:hover p{
+.series .box .box_1 .box_b:hover p{
 	transform: translate(0px,40px);
 	opacity: 1;
 }

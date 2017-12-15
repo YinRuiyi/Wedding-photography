@@ -111,19 +111,8 @@ class ChildClassController extends Controller
    public function update(Request $request, $id)
     {
         $data = $request->except('_method','_token');
-        // dd($data);
+        dd($data);
 
-        $classid = $data['classid'];
-
-        $childlink = DB::update("update class_child set childlink = ? where id = ? ",[$data['childlink']],$id);
-        $childnum = DB::update("update class_child set childnum = ? where id = ? ",[$data['childnum']],$id);
-        $childname = DB::update("update class_child set childname = ? where id = ? ",[$data['childname']],$id);
-// dd($childnum);
-        if ($childlink || $childnum || $childname) {
-            return redirect('admin/childclass')->with('msg','修改成功');
-        }else{
-            return redirect('admin/childclass')->with('msg','修改失败');
-        }
        
     }
 
